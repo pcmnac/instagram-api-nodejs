@@ -1,7 +1,10 @@
 const express = require('express')
+var cors = require('cors')
 const api = require('./api');
 const app = express()
 const port = process.env.PORT || 5000
+
+app.use(cors());
 
 app.get('/api/user', async (req, res, next) => {
   try {
