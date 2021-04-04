@@ -1,7 +1,7 @@
 const express = require('express')
 const api = require('./api');
 const app = express()
-const port = 5000
+const port = process.env.PORT || 5000
 
 app.get('/api/user', async (req, res, next) => {
   try {
@@ -20,6 +20,6 @@ app.get('/api/user', async (req, res, next) => {
   }
 })
 
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`)
+app.listen(port , () => {
+  console.log(`Server listening at port ${port}`)
 })
