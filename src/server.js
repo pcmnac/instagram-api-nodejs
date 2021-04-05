@@ -1,8 +1,9 @@
-const express = require('express')
-var cors = require('cors')
+const express = require('express');
+const cors = require('cors');
 const api = require('./api');
-const app = express()
-const port = process.env.PORT || 5000
+
+const app = express();
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 
